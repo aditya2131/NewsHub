@@ -1,0 +1,82 @@
+header {
+    background-color: #0d0b3d; /* Dark blue background */
+    padding: 20px 0;
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+  }
+  
+  .header-logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #6a4bff; /* Purple text for ACONEWS */
+  }
+  
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-nav nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header-nav nav ul li {
+    display: inline-block;
+  }
+  
+  .header-nav nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 30px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .header-search input {
+    margin-left: 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .header-title {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .header-title h2 {
+    font-size: 64px;
+    color: #6a4bff; /* Purple color for the title */
+    font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+    .header-top {
+      flex-direction: column;
+    }
+  
+    .header-nav nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .header-title h2 {
+      font-size: 48px;
+    }
+  }
+  

@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import TrendingPage from './pages/TrendingPage';
+import TopNewsPage from './pages/TopNewsPage';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import './styles/App.css'; // Import your main styles
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Header />
+                <Navbar />
+                <div className="content">
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/trending" element={<TrendingPage />} />
+                        <Route path="/top-news" element={<TopNewsPage />} />
+                    </Routes>
+                </div>
+                <Footer />
+            </div>
+        </Router>
+    );
 }
 
 export default App;
