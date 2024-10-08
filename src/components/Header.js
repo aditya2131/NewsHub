@@ -6,7 +6,7 @@ const Header = () => {
     <header>
       <div className="header-top">
         <div className="header-logo">
-          <h1>G-React News</h1>
+          <h1>News-Hub</h1>
         </div>
         <div className="header-nav">
           <nav>
