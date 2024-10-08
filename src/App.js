@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 import './styles/App.css'; // Import your main styles
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 function App() {
     return (
         <Router>

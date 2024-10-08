@@ -20,7 +20,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header-title">
-        <h2>G-REACT NEWS</h2>
+        <h2>NewsHub</h2>
       </div>
     </header>
   );

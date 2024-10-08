@@ -1,23 +1,38 @@
-const apiKey = "197f1665791b4183a3ae2f545d954e18";
 const BASE_URL = 'https://newsapi.org/v2/';
+const apiKey = process.env.REACT_APP_NEWS_API_KEY; // Use environment variable
 
-// Fetch general news top-headlines?country=us&apiKey=429b645771c34989950151e40366ab92
+// Fetch general news
 export const fetchNews = async () => {
-    const response = await fetch(`${BASE_URL}/top-headlines?country=us&apikey=${apiKey}`);
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch(`${BASE_URL}/top-headlines?country=us&apikey=${apiKey}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching general news:", error);
+        return { articles: [] }; // Return empty array if error occurs
+    }
 };
 
-// Fetch trending news (you can adjust the query to get trending news)
+// Fetch trending news
 export const fetchTrendingNews = async () => {
-    const response = await fetch(`${BASE_URL}/everything?q=trending&apikey=${apiKey}`);
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch(`${BASE_URL}/everything?q=trending&apikey=${apiKey}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching trending news:", error);
+        return { articles: [] };
+    }
 };
 
-// Fetch top news (general top headlines)
+// Fetch top news
 export const fetchTopNews = async () => {
-    const response = await fetch(`${BASE_URL}/top-headlines?country=us&apikey=${apiKey}`);
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch(`${BASE_URL}/top-headlines?country=us&apikey=${apiKey}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching top news:", error);
+        return { articles: [] };
+    }
 };

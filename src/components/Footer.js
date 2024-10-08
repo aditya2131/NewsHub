@@ -11,7 +11,7 @@ const Footer = () => {
           <button 
   type="submit" 
   className="footer-button" 
-  onClick={() => window.location.href = 'https://portfolio-personal-lac-zeta.vercel.app/'}
+  onClick={() => window.location.href = 'https://aditya-mishra-portfolio-five.vercel.app/'}
 ><strong>Let's Collaborate!</strong>
 
 </button>
