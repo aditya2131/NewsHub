@@ -25,7 +25,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "server": "node server.js",
+    "client": "react-scripts start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": [
@@ -46,11 +49,12 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "gh-pages": "^6.1.1"
   },
-  "description": "Welcome to the  NewsHub application! This is a React-based news application that provides users with the latest news articles, trending topics, and top headlines from various sources.",
+  "description": "Welcome to the NewsHub application! This is a React-based news application that provides users with the latest news articles, trending topics, and top headlines from various sources.",
   "main": "index.js",
   "keywords": [],
-  "author": "",
+  "author": "Aditya Mishra",
   "license": "ISC"
 }

@@ -1,13 +1,11 @@
-// NewsList.js
 import React from 'react';
 import PropTypes from 'prop-types';
 import NewsItem from './NewsItem';
 import '../styles/NewsList.css';
 
 const NewsList = ({ articles, loading }) => {
-  // Check if articles is an array and has elements
   if (loading) {
-    return <div>Loading articles...</div>; // Show loading message
+    return <div className="loading">Loading articles...</div>; // Show loading message with class
   }
 
   if (!Array.isArray(articles) || articles.length === 0) {
@@ -17,7 +15,7 @@ const NewsList = ({ articles, loading }) => {
   return (
     <div className="news-list">
       {articles.map((article) => (
-        <NewsItem key={article.url} article={article} /> // Use a unique key
+        <NewsItem key={article.url || article.title} article={article} /> // Fallback to article.title for key
       ))}
     </div>
   );
