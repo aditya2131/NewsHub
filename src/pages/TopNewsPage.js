@@ -1,3 +1,4 @@
+// TopNewsPage.js
 import React, { useEffect, useState } from 'react';
 import NewsList from '../components/NewsList';
 import { fetchTopNews } from '../api'; // API to fetch top news
@@ -7,8 +8,12 @@ const TopNewsPage = () => {
 
     useEffect(() => {
         const loadTopNews = async () => {
-            const news = await fetchTopNews();
-            setArticles(news.articles);
+            try {
+                const news = await fetchTopNews();
+                setArticles(news.articles);
+            } catch (error) {
+                console.error('Error loading top news:', error);
+            }
         };
         loadTopNews();
     }, []);
