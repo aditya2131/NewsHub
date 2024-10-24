@@ -1,3 +1,4 @@
+//api.js
 const BASE_URL = 'https://newsapi.org/v2/';
 const apiKey = process.env.REACT_APP_NEWS_API_KEY; // Use environment variable
 
